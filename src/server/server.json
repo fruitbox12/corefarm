@@ -1,0 +1,8 @@
+{
+	"ip": "0.0.0.0",
+	"port": 8081,
+	"database": "database",
+	"dashboard_html": "res/index.html",
+	"client_ping": 15000,
+	"refresh_screen": 2000
+}

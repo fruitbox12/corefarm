@@ -1,0 +1,9 @@
+{
+	"ip": "0.0.0.0",
+	"port": 8081,
+	"find_server": 5000,
+	"update_server": 1000,
+	"ping_server": 15000,
+	"max_threads": 0,
+	"refresh_screen": 1000
+}

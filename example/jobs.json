@@ -1,0 +1,35 @@
+[
+	{
+		"name": "Download Pages",
+		"tags": ["download"],
+		"dependencies": [],
+		"threads_per_task": 1,
+		"working_dir": "../../example/",
+		"tasks": [
+			{
+				"name": "Page 1",
+				"call": "nodejs",
+				"args": ["download.js", "1"]
+			},
+			{
+				"name": "Page 2",
+				"call": "nodejs",
+				"args": ["download.js", "2"]
+			}
+		]
+	},
+	{
+		"name": "Merge Pages",
+		"tags": [],
+		"dependencies": ["download"],
+		"threads_per_task": 0,
+		"working_dir": "../../example/",
+		"tasks": [
+			{
+				"name": "Merge",
+				"call": "nodejs",
+				"args": ["merge.js", "index-1.html", "index-2.html"]
+			}
+		]
+	}
+]
