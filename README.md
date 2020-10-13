@@ -27,7 +27,7 @@ They can be installed individually in separate computers.
 1. Install Node.js.\
 *Current tested version is v10.19.0, but probably works with last and previous versions.*
 
-2. [Download last Corefarm release.](releases) Unpack content of `build` folder somewhere. Client and manager folders can simply be copied to multiple computers later, after basic configuration (following steps).
+2. [Download last Corefarm release.](https://github.com/nunocp/corefarm/releases) Unpack content of `build` folder somewhere. Client and manager folders can simply be copied to multiple computers later, after basic configuration (following steps).
 
 3. Define **ip** and **port** for server in all configuration files (`server.json`, `client.json`, `manager.json`).
 
