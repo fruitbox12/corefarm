@@ -1,9 +1,9 @@
 # Corefarm
-Agnostic server/client for parallel processing. Create, manage and automatically distribute jobs to run on client computers across a network or local host.
+Automatic management system for parallel processing tasks on Windows, Linux and MacOS. Create, manage and automatically distribute jobs to run in parallel on client computers over a network or local host.
 
 Use cases include: render farm, data mining, web scraping, machine learning, data processing. Anything that can be parallelized, really.
 
-It's free, open-source and cross-platform.
+It's free and open-source.
 
 **WARNING: Corefarm is in early development. Incompleteness and instability may occur.**
 
@@ -22,16 +22,16 @@ They can be installed individually in separate computers.
 ## Installing
 *Windows, Linux, MacOS*
 
-*Installer isn't released yet, but current method is also easy:*
+*Dependency-free installer isn't done yet, but current method should be straightforward:*
 
 1. Install Node.js.\
 *Current tested version is v10.19.0, but probably works with last and previous versions.*
 
-2. [Download last Corefarm release.](https://github.com/nunocp/corefarm/releases/) Unpack content of `build` folder somewhere. Client and manager folders can simply be copied to multiple computers later, after basic configuration (next steps).
+2. [Download last Corefarm release.](releases) Unpack content of `build` folder somewhere. Client and manager folders can simply be copied to multiple computers later, after basic configuration (following steps).
 
 3. Define **ip** and **port** for server in all configuration files (`server.json`, `client.json`, `manager.json`).
 
-4. Move or copy these folders where you want them to be "installed". Generally, if you have several computers in a local network, you'll want to run one server and multiple clients and managers. You can use all of them in just one machine, too.
+4. Move or copy these folders where you want them to be "installed" (remember to have Node.js installed on all machines). Generally, if you have several computers in a local network, you'll want to run one server and multiple clients and managers. You can use all of them in just one machine, too.
 
 5. Allow in and out communication for **port** in the firewall settings of where server is installed. In most cases, it's not necessary for client and manager computers.
 
@@ -136,12 +136,14 @@ We call Corefarm's **manager** with argument *post-job* to submit it to the (run
 
 If everything is ok, server will accept it and add to its queue. That's it.
 
+*Currently, you can find client log files in path/to/client/temp/job-id.*
+
 ### \*Current known issues\*
 
 **These issues are high priority for fixing in next releases:**
-* Server doesn't store any tasks status; they're restarted every time server is started.
+* Server doesn't store task status (e.g. 'completed'); they're restarted every time server is started.
 * To remove a job from server you have to manually delete its files on server's database folder and restart it.
-* Client's cache files also have to be manually cleaned.
+* Client accumulates cache files, eating up disk storage; they have to be manually removed.
 * Server doesn't disconnect unresponsive clients.
 
 ## Development
