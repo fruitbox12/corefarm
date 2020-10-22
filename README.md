@@ -1,11 +1,13 @@
 # Corefarm
-Automatic management system for parallel processing tasks on Windows, Linux and MacOS. Create, manage and automatically distribute jobs to run in parallel on client computers over a network or local host.
+Automatic management system for parallel computing tasks on Windows, Linux and MacOS. Create, manage and automatically distribute jobs to run in parallel on client computers over a network or local host.
 
-Use cases include: render farm, data mining, web scraping, machine learning, data processing. Anything that can be parallelized, really.
+Use cases include: render farm, data mining, web scraping, machine learning, data processing. Anything that can be parallelized.
 
 It's free and open-source.
 
 **WARNING: Corefarm is in early development. Incompleteness and instability may occur.**
+
+![Corefarm-0.1.0 screenshot 1](img/corefarm-0.1.0-screenshot-1.jpg)
 
 ## Overview
 Corefarm is a lightweight software that aims to provide a practical way to assign and distribute process calls (aka tasks) on single or multiple computers, leveraging the distributed power of modern computing.
